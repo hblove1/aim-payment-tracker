@@ -1,0 +1,69 @@
+h1,
+p {
+  font-family: Lato;
+}
+
+#root {
+  background-color: #808baa80;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.months {
+  display: grid;
+  row-gap: 15px;
+}
+
+.months h1 {
+  /* text-align: center; */
+  color: #24a;
+}
+
+.month {
+  background-color: #cdd9f0;
+  border: 1px solid #959bac;
+  border-radius: 5px;
+  color: #24a;
+}
+
+.subcomponent {
+  display: grid;
+  padding: 6px 8px;
+  row-gap: 8px;
+}
+
+.header {
+  grid-template-columns: 2fr 4fr;
+  align-items: center;
+  border-bottom: 1px solid #808baa;
+}
+
+.header h3 {
+  margin: 0px;
+}
+
+.bottomline {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.collected {
+  grid-template-columns: repeat(5, 1fr);
+  text-align: center;
+  align-items: flex-end;
+}
+
+.owed {
+  grid-template-columns: repeat(5, 1fr);
+  text-align: center;
+  align-items: flex-end;
+}
+
+.owed input {
+  min-width: 0;
+  max-width: 20px;
+  justify-self: center;
+  text-align: center;
+}
