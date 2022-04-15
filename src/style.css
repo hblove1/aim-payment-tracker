@@ -44,7 +44,8 @@ p {
 
 @media (min-width: 600px) {
   .header {
-    grid-template-columns: 2fr 4fr;
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -54,17 +55,25 @@ p {
 
 .bottomline {
   display: flex;
-  justify-content: end;
+  justify-content: space-evenly;
+  column-gap: 15px;
+}
+
+@media (min-width: 600px) {
+  .bottomline {
+    display: flex;
+    justify-content: end;
+  }
 }
 
 .bottomline-section {
   display: grid;
-  padding-left: 15px;
+  text-align: center;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 600px) {
   .bottomline-section {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
   }
 }
 
