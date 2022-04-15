@@ -5,6 +5,7 @@ p {
 
 #root {
   background-color: #808baa80;
+  height: 100vh;
 }
 
 .container {
@@ -36,9 +37,15 @@ p {
 }
 
 .header {
-  grid-template-columns: 2fr 4fr;
+  grid-template-columns: 1fr;
   align-items: center;
   border-bottom: 1px solid #808baa;
+}
+
+@media (min-width: 600px) {
+  .header {
+    grid-template-columns: 2fr 4fr;
+  }
 }
 
 .header h3 {
@@ -46,7 +53,19 @@ p {
 }
 
 .bottomline {
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  justify-content: end;
+}
+
+.bottomline-section {
+  display: grid;
+  padding-left: 15px;
+}
+
+@media (min-width: 700px) {
+  .bottomline-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .collected {
