@@ -3,6 +3,10 @@ p {
   font-family: Lato;
 }
 
+body {
+  margin: 0;
+}
+
 #root {
   background-color: #808baa80;
   height: 100vh;
@@ -24,7 +28,6 @@ p {
 }
 
 .month {
-  background-color: #cdd9f0;
   border: 1px solid #959bac;
   border-radius: 5px;
   color: #24a;
@@ -36,10 +39,29 @@ p {
   row-gap: 8px;
 }
 
+.month header {
+  background-color: hsl(219, 54%, 87%);
+  display: grid;
+  grid-template-columns: auto min-content;
+  cursor: pointer;
+  border-bottom: 1px solid #808baa;
+}
+
+.month body {
+  background-color: hsl(219, 54%, 94%);
+  margin: 0;
+  padding: 8px;
+}
+
+.arrow {
+  align-self: center;
+  padding-right: 8px;
+}
+
 .header {
   grid-template-columns: 1fr;
   align-items: center;
-  border-bottom: 1px solid #808baa;
+  text-align: center;
 }
 
 @media (min-width: 600px) {

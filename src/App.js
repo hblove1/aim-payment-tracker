@@ -40,9 +40,21 @@ export default function App() {
     },
   ]);
 
+  const onUpdate = (updatedMonth) => {
+    console.log('current months:', months);
+    console.log('new month:', updatedMonth);
+    setMonths(
+      months.map((month) =>
+        month.id !== updatedMonth.id ? month : updatedMonth
+      )
+      // months
+    );
+    console.log('new months:', months);
+  };
+
   return (
     <div className="container">
-      <Months months={months} rate={rate} />
+      <Months months={months} rate={rate} onUpdate={onUpdate} />
     </div>
   );
 }
