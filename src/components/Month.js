@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
+import { FaArrowDown, FaArrowUp } from 'react-icons/fa';
 
 const Month = ({ month, days, rate, onUpdate, ytd }) => {
   const [tuesdayVacation, setTuesdayVacation] = useState(
@@ -36,50 +36,50 @@ const Month = ({ month, days, rate, onUpdate, ytd }) => {
           <h2>{month.name}</h2>
           <div className="subcomponent bottomline">
             <div className="bottomline-section">
-              <label>Collected: </label>
-              <label>${collected}</label>
+              <div>Collected: </div>
+              <div>${collected}</div>
             </div>
             <div className="bottomline-section">
-              <label>Owed: </label>
-              <label>${owed}</label>
+              <div>Owed: </div>
+              <div>${owed}</div>
             </div>
             <div className="bottomline-section">
-              <label>Net: </label>
-              <label>${net}</label>
+              <div>Net: </div>
+              <div>${net}</div>
             </div>
             <div className="bottomline-section">
-              <label>YTD: </label>
-              <label>${ytd}</label>
+              <div>YTD: </div>
+              <div>${ytd}</div>
             </div>
           </div>
         </div>
         {expanded ? (
-          <IoIosArrowUp className="arrow" size="24" />
+          <FaArrowUp className="arrow" />
         ) : (
-          <IoIosArrowDown className="arrow" size="24" />
+          <FaArrowDown className="arrow" />
         )}
       </header>
       {expanded && (
         <body>
           <div className="subcomponent collected">
-            <label>Tuesday Subs</label>
-            <label>Tuesday Weekly</label>
-            <label>Thursday Subs</label>
-            <label>Thursday Weekly</label>
-            <label>Total</label>
-            <label>${month.tuesday.subs}</label>
-            <label>${month.tuesday.weekly}</label>
-            <label>${month.thursday.subs}</label>
-            <label>${month.thursday.weekly}</label>
-            <label>${collected}</label>
+            <div>Tuesday Subs</div>
+            <div>Tuesday Weekly</div>
+            <div>Thursday Subs</div>
+            <div>Thursday Weekly</div>
+            <div>Total</div>
+            <div>${month.tuesday.subs}</div>
+            <div>${month.tuesday.weekly}</div>
+            <div>${month.thursday.subs}</div>
+            <div>${month.thursday.weekly}</div>
+            <div>${collected}</div>
           </div>
           <div className="subcomponent owed">
-            <label>Tuesday Weeks</label>
-            <label>Tuesday Vacation</label>
-            <label>Thursday Weeks</label>
-            <label>Thursday Vacation</label>
-            <label>Total</label>
-            <label>{month.tuesday.weeks}</label>
+            <div>Tuesday Weeks</div>
+            <div>Tuesday Vacation</div>
+            <div>Thursday Weeks</div>
+            <div>Thursday Vacation</div>
+            <div>Total</div>
+            <div>{month.tuesday.weeks}</div>
             <input
               type="text"
               value={tuesdayVacation}
@@ -92,7 +92,7 @@ const Month = ({ month, days, rate, onUpdate, ytd }) => {
                 onUpdate(newMonth);
               }}
             />
-            <label>{month.thursday.weeks}</label>
+            <div>{month.thursday.weeks}</div>
             <input
               type="text"
               value={thursdayVacation}
@@ -105,7 +105,7 @@ const Month = ({ month, days, rate, onUpdate, ytd }) => {
                 onUpdate(newMonth);
               }}
             />
-            <label>${owed}</label>
+            <div>${owed}</div>
           </div>
         </body>
       )}

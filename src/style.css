@@ -17,6 +17,68 @@ body {
   margin: 0 auto;
 }
 
+.players {
+  display: grid;
+  /* row-gap: 15px; */
+}
+
+.player-wrapper {
+  border: 1px solid #959bac;
+  border-radius: 5px;
+  background-color: hsl(219, 54%, 87%);
+  padding: 10px;
+  padding-right: auto;
+}
+
+.player {
+  width: min-content;
+  display: grid;
+  grid-template-columns: 2fr min-content 4fr 1fr min-content;
+}
+
+.player-name {
+  min-width: 200px;
+}
+
+.player-sub {
+  min-width: 50px;
+}
+
+.player-email {
+  min-width: 400px;
+}
+
+.player-balance {
+  min-width: 100px;
+}
+
+.new-transaction {
+  /* width: min-content; */
+  display: grid;
+  grid-template-columns: repeat(2, min-content);
+  padding: 10px;
+  background-color: hsl(219, 54%, 94%);
+  margin-top: 10px;
+  column-gap: 50px;
+}
+
+.new-transaction form {
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  column-gap: 15px;
+  margin: 0;
+}
+
+.form-control {
+  display: grid;
+  grid-template-columns: repeat(2, min-content);
+  column-gap: 5px;
+}
+
+.transaction-amount {
+  max-width: 50px;
+}
+
 .months {
   display: grid;
   row-gap: 15px;
@@ -84,7 +146,7 @@ body {
 @media (min-width: 600px) {
   .bottomline {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
   }
 }
 

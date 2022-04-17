@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-// import Players from '/components/Players';
+import Players from './components/Players';
 import Months from './components/Months';
 import './style.css';
 
@@ -92,7 +92,7 @@ export default function App() {
 
   return (
     <div className="container">
-      {/* {screen === Screen.Players && <Players players={players} />} */}
+      {screen === Screen.Players && <Players players={players} />}
       {screen === Screen.Months && (
         <Months months={months} rate={rate} onUpdate={onUpdate} />
       )}
